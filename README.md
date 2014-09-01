@@ -8,14 +8,14 @@ Clone this repo into your ~/.vim/bundle directory.
 ### Using
 In your .vimrc:
 ```
-au BufNewFile,BufRead *.FTODO set filetype=TODO
+au BufNewFile,BufRead *.asm,*.inc set filetype=gbasm
 ```
 and/or put this line near the top or bottom of your assembly file(s):
 ```
-@ vim: ft=TODO
+; vim: ft=gbasm
 ```
 or run inside vim:
 ```
-:setf TODO
+:setf gbasm
 ```
 
