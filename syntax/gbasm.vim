@@ -12,7 +12,7 @@ syn case ignore
 
 syn keyword gbasmTodo    contained todo fixme xxx warning danger note notice bug author date
 
-syn match gbasmNumericOp  "[#+-*/&|^~<>=!?]"
+syn match gbasmNumericOp  "[#+-/*<>=&|^~!?]"
 " hex
 syn match gbasmNumber "\$\x\+\>"
 syn match gbasmNumber "0x\x\+\>"
@@ -80,7 +80,7 @@ if version >= 508 || !exists("did_gbasm_syntax_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 
-  HiLink gbasmNumericOp     Number
+  HiLink gbasmNumericOp     Operator
   HiLink gbasmNumber        Number
 
   HiLink gbasmComment       Comment
@@ -90,10 +90,10 @@ if version >= 508 || !exists("did_gbasm_syntax_inits")
   HiLink gbasmIdentifier    Special
   HiLink gbasmLabel         Label
 
-  HiLink gbasmInstruction   Statement
-  HiLink gbasmCondition     Statement
+  HiLink gbasmInstruction   Function
+  HiLink gbasmCondition     Function
 
-  HiLink gbasmRegister      Identifier
+  HiLink gbasmRegister      Type
   
   HiLink gbasmInclude       Include
   HiLink gbasmPreCondit     PreCondit
